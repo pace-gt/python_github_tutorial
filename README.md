@@ -47,7 +47,7 @@ Note: If you update the conda package, you may have to redo the pip install.  Wi
 
 This is an example of the supplimentary functions in the utils directory (``<YOUR_FILE_PATH/python_github_tutorial/python_github_tutorial/utils``) and the main function in the main_functions directory (``<YOUR_FILE_PATH/python_github_tutorial/python_github_tutorial/main_functions``).
 
-The example is located here ``<YOUR_FILE_PATH/python_github_tutorial/examples_to_run/examples.py``. The instructions to run it are provided below:
+The example is located here ``<YOUR_FILE_PATH/python_github_tutorial/examples_to_run``. The instructions to run it are provided below:
 
 `cd examples_to_run`
 
