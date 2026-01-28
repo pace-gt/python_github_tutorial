@@ -1,0 +1,58 @@
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  # run 1 time per month (on the 1st day of the month at 6:40 AM) = "40 6 1 * *"
+  # run 1 time per week on Monday at 6:40 AM = "40 6 * * 1"
+  schedule:
+    - cron: "40 6 * * 1"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Mambaforge-pytest:
+    name: Unit-Test (${{ matrix.os }}, Python ${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12"]
+        os: ["macos", "windows", "ubuntu"]
+        include:
+          - os: macos 
+          - environment-file: environment.yml
+          - os: windows
+            environment-file: environment.yml
+          - os: ubuntu
+            environment-file: environment.yml
+
+    steps:
+      - name: Checkout Branch / Pull Request
+        uses: actions/checkout@v4
+
+      - name: Install Mamba 
+        uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: ${{ matrix.environment-file }}
+          python-version: ${{ matrix.python-version }}
+          use-mamba: true
+
+      - shell: bash -l {0}
+        run: |
+          pip install .
+
+      - shell: bash -l {0}
+        name: Test (OS -> ${{ matrix.os }} / Python -> ${{ matrix.python-version }})
+        run: python -m pytest -v --color yes  python_github_tutorial/tests --cov
+        #run: python -m pytest -v --cov=python_github_tutorial --cov-report=xml --cov-append --cov-config=setup.cfg --color yes python_github_tutorial/tests
+        #echo "tests finished"
+
+      #- name: Upload coverage reports to Codecov
+      #  uses: codecov/codecov-action@v3

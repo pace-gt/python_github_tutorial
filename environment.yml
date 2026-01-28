@@ -6,6 +6,8 @@ dependencies:
   - python
   - numpy
   - pytest
+  - pytest-cov 
+  - coverage 
   - pip
   - mock
   - ipython
