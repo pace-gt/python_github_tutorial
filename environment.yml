@@ -8,12 +8,12 @@ dependencies:
   - pytest
   - pip
   - mock
-  - ipython 
-  - nbconvert 
-  - jupyter 
+  - ipython
+  - nbconvert
+  - jupyter
   - pygments
   - numpydoc
-  - sphinx=6.1.1
+  - sphinx
   - sphinx_rtd_theme
   - nbsphinx
   - sphinxcontrib
