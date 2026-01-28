@@ -1,3 +1,5 @@
+[![CI](https://github.com/pace-gt/python_github_tutorial/actions/workflows/CI.yml/badge.svg)](https://github.com/pace-gt/python_github_tutorial/blob/main/.github/workflows/CI.yml)
+
 #  python_github_tutorial
 
 ## Overview
