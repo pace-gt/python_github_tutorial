@@ -19,9 +19,12 @@ Alternative software for `miniforge`:
 
 The  python_github_tutorial package dependencies can be installed via conda, and this package tagged in conda via pip install:
 
+To perform the python_github_tutorial package build, please run the following commands
+from the ``<YOUR_FILE_PATH/python_github_tutorial`` directory.
+
 Create and install conda package:
 
-Change to the directory with the "environment.yml" file -> "<YOUR_FILE_PATH/python_github_tutorial>"
+Change to the directory
 
 `cd python_github_tutorial`
 
@@ -42,9 +45,9 @@ Note: If you update the conda package, you may have to redo the pip install.  Wi
 
 ## Run the example
 
-This is an example of the supplimentary functions in the utils directory (python_github_tutorial/utils) and the main function in the main_functions directory (python_github_tutorial/main_functions).
+This is an example of the supplimentary functions in the utils directory (``<YOUR_FILE_PATH/python_github_tutorial/python_github_tutorial/utils``) and the main function in the main_functions directory (``<YOUR_FILE_PATH/python_github_tutorial/python_github_tutorial/main_functions``).
 
-The example is located here 'examples_to_run/examples.py'. The instructions to run it are provided below:
+The example is located here ``<YOUR_FILE_PATH/python_github_tutorial/examples_to_run``. The instructions to run it are provided below:
 
 `cd examples_to_run`
 
@@ -64,7 +67,7 @@ The unit tests via ``pytest`` ensure that the code is build properly, running co
 accurate results.
 
 To perform these tests (unit tests) for the python_github_tutorial package, please run the following commands
-from the ``python_github_tutorial/tests`` directory:
+from the ``<YOUR_FILE_PATH/python_github_tutorial/python_github_tutorial/tests`` directory:
 
 Run all the tests:
 
@@ -88,14 +91,17 @@ Run individual test on 'test_main_functions.py':
 
 Building these HTML files locally via sphinx, which will allow you to access them with your
 local internet browsing application or HTML viewer (chrome, safari, VScode, etc.).
-The HTML files will be located in the ``docs/_build/html`` directory after they are built.
+The HTML files will be located in the ``<YOUR_FILE_PATH/python_github_tutorial/docs/_build/html`` directory after they are built.
 
 The python_github_tutorial utilizes [sphinx](https://www.sphinx-doc.org/en/master/index.html) to construct the documentation.
 The user can build the documentation locally by executing the following command from the ``docs`` directory:
 
+To perform the documents (docs) build for the python_github_tutorial package, please run the following commands
+from the ``<YOUR_FILE_PATH/python_github_tutorial/docs`` directory:
+
 `conda activate python_github_tutorial`
 
-`cd python_github_tutorial/docs`
+`cd docs`
 
 `make html`
 
