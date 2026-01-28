@@ -21,7 +21,7 @@ The  python_github_tutorial package dependencies can be installed via conda, and
 
 Create and install conda package:
 
-cd "<YOUR_FILE_PATH/python_github_tutorial>"
+Change to the directory with the "environment.yml" file -> "<YOUR_FILE_PATH/python_github_tutorial>"
 
 `cd python_github_tutorial`
 
