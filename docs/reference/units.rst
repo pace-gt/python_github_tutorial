@@ -2,13 +2,16 @@
 Units
 =====
 
-In this python_github_tutorial package, the input and output values are unitless (i.e., no units were used).  
+In this ``python_github_tutorial`` package, the input and output values are unitless (i.e., no units were used).  
 
 If units were used in your software, you should specify them here and how they are utilized. 
 This includes specifiying the unitless variables, so the user knows. A good code will test for 
 the unit values and unitless values, minimizing user input error. 
 
 .. note::
+    
+    Scientists and Engineers may find this ``unyt`` python package useful. 
+    
     The `unyt <https://unyt.readthedocs.io/en/stable/>`_ can automatically convert units 
     for you so the users can input any units, provided they are in the proper form.  
     If the ``unyt`` package is used, it should be mentioned here, specifying where and 
