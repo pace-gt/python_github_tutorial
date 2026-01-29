@@ -1,23 +1,23 @@
 name: python_github_tutorial_docs
 channels:
   - conda-forge
-  - defaults
 dependencies:
-  - python
+  - python=3.12.*
   - numpy
   - pytest
-  - pip
+  - pytest-cov 
+  - coverage 
   - mock
-  - ipython 
-  - nbconvert 
-  - jupyter 
+  - ipython
+  - nbconvert
+  - jupyter
   - pygments
   - numpydoc
-  - sphinx=6.1.1
-  - sphinx_rtd_theme
+  - sphinx
   - nbsphinx
-  - sphinxcontrib
+  - pip
   - pip:
+    - sphinxcontrib-packages
     - sphinxcontrib-svg2pdfconverter
     - sphinxcontrib-video
     - sphinxcontrib-serializinghtml
