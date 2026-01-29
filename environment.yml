@@ -1,14 +1,12 @@
 name: python_github_tutorial
 channels:
   - conda-forge
-  - defaults
 dependencies:
-  - python
+  - python=3.12.*
   - numpy
   - pytest
   - pytest-cov 
   - coverage 
-  - pip
   - mock
   - ipython
   - nbconvert
@@ -16,10 +14,10 @@ dependencies:
   - pygments
   - numpydoc
   - sphinx
-  - sphinx_rtd_theme
   - nbsphinx
-  - sphinxcontrib
+  - pip
   - pip:
+    - sphinxcontrib-packages
     - sphinxcontrib-svg2pdfconverter
     - sphinxcontrib-video
     - sphinxcontrib-serializinghtml

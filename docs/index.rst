@@ -12,7 +12,7 @@ This Github tutorial shows the following:
 
 * Code structure in a GitHub repository.
 * Setup and building GitHub documentation.
-* Basic structure and docstring (code documentation) for Python functions and classes.
+* Basic structure and docstrings for Python functions and classes.
 
 
 Code structure in a GitHub repository
@@ -32,20 +32,21 @@ Setup and building GitHub documentation
 ---------------------------------------
 
 This Github repository shows a simple example of how GitHub documentation is created via sphinx. 
-This documentation can be build via `readthedocs <https://about.readthedocs.com/?ref=dotorg-homepage>`_ 
-for everyone to find on the internet. 
-This documentation can also be build locally via ``sphinx`` and the ``make html`` command in the ``docs`` 
+This documentation can also be build locally via `sphinx <https://www.sphinx-doc.org/en/master/>`_  and the ``make html`` command in the ``docs`` 
 directory, which builds the html files locally that can be viewed in your local 
+This documentation can be build via `readthedocs <https://about.readthedocs.com/?ref=dotorg-homepage>`_ 
+for everyone to find on the internet using the same files and structure. 
 internet browsing application or html viewer (chrome, safari, VScode, etc.).
 
 
-Basic structure and docstring (code documentation) for Python functions and classes
------------------------------------------------------------------------------------
+Basic structure and docstrings for Python functions and classes
+---------------------------------------------------------------
 
 This Github repository demonstrates how to write object-oriented Python code using classes and functions. 
 In addition to the code structure itself, it is also an example of how to write Python docstrings. 
 Python docstrings are the documentation for the classes and functions, which describe the 
 input variables, attributes, methods, and outputs/output variables.
+
 
 .. toctree::
 	:caption: Overview
