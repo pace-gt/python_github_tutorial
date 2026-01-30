@@ -44,6 +44,7 @@ def find_directory(find_directory_name):
 
     return full_directory_path
 
+
 class TestDocsBuild(BaseTest):
 
     # ******************************************
