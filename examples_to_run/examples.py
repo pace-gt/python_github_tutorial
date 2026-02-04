@@ -32,5 +32,5 @@ print(
     f"{math_variable.add_1_to_both_numbers_and_multiply()}"
     )
 print(
-    f"type(math_variableadd_1_to_both_numbers_and_multiply()) = "
+    f"type(math_variable.add_1_to_both_numbers_and_multiply()) = "
     f"{type(math_variable.add_1_to_both_numbers_and_multiply())}\n")
