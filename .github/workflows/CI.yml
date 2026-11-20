@@ -37,13 +37,12 @@ jobs:
       - name: Checkout Branch / Pull Request
         uses: actions/checkout@v7
 
-      - uses: conda-incubator/setup-miniconda@8ee1f361103df19b6f8c8655fd3967a8ecb162d5
+      - name: Install Mamba 
+        uses: mamba-org/setup-micromamba@v3
         with:
           environment-file: ${{ matrix.environment-file }}
-          miniforge-variant: ${{ matrix.miniforge-variant }}
-          miniforge-version: ${{ matrix.miniforge-version }}
-          python-version: ${{ matrix.python-version }}
-          use-mamba: true
+          create-args: >-
+            python=${{ matrix.python-version }}
 
       - shell: bash -l {0}
         run: |
