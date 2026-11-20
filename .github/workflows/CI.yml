@@ -41,7 +41,8 @@ jobs:
         uses: mamba-org/setup-micromamba@v3
         with:
           environment-file: ${{ matrix.environment-file }}
-          create-args: python=${{ matrix.python-version }}
+          python-version: ${{ matrix.python-version }}
+          use-mamba: true
 
       - shell: bash -l {0}
         run: |
