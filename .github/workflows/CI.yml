@@ -1,4 +1,4 @@
-name: CI
+name: CI 
 
 # Controls when the workflow will run
 on:
@@ -23,7 +23,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.13, 3.14"]
+        python-version: ["3.13", "3.14"]
         os: ["macos", "windows", "ubuntu"]
         include:
           - os: macos
@@ -41,8 +41,8 @@ jobs:
         uses: mamba-org/setup-micromamba@v3
         with:
           environment-file: ${{ matrix.environment-file }}
-          python-version: ${{ matrix.python-version }}
-          use-mamba: true
+          create-args: >-
+            python=${{ matrix.python-version }}
 
       - shell: bash -l {0}
         run: |

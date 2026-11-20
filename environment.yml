@@ -2,7 +2,7 @@ name: python_github_tutorial
 channels:
   - conda-forge
 dependencies:
-  - python=3.12.*
+  - python>=3.13,<3.15
   - numpy
   - pytest
   - pytest-cov 
