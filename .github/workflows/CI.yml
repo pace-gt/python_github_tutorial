@@ -23,11 +23,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.12"]
+        python-version: ["3.13, 3.14"]
         os: ["macos", "windows", "ubuntu"]
         include:
-          - os: macos 
-          - environment-file: environment.yml
+          - os: macos
+            environment-file: environment.yml
           - os: windows
             environment-file: environment.yml
           - os: ubuntu
@@ -35,10 +35,10 @@ jobs:
 
     steps:
       - name: Checkout Branch / Pull Request
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Install Mamba 
-        uses: mamba-org/setup-micromamba@v2
+        uses: mamba-org/setup-micromamba@v3
         with:
           environment-file: ${{ matrix.environment-file }}
           python-version: ${{ matrix.python-version }}
@@ -55,4 +55,4 @@ jobs:
         #echo "tests finished"
 
       #- name: Upload coverage reports to Codecov
-      #  uses: codecov/codecov-action@v3
+      #  uses: codecov/codecov-action@v7
